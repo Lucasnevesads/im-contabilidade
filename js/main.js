@@ -138,4 +138,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ---- Ano no rodapé ---- */
   document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = "2026"));
+
+  /* Duplica os depoimentos pro carrossel rodar em loop contínuo (sem salto no fim) */
+  const qtrack = document.querySelector(".quotes-track");
+  if (qtrack) qtrack.innerHTML += qtrack.innerHTML;
 });
