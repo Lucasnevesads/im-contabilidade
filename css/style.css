@@ -495,10 +495,14 @@ body.nav-open .nav-mobile { transform: none; }
   .section { padding-block: 56px; }
   .hero-cta { flex-direction: column; align-items: stretch; }
   .hero-cta .btn, .cta-actions .btn { width: 100%; }
-  .hero-trust { font-size: .86rem; }
-  /* Foto do hero não pode ocupar a tela toda no celular */
-  .hero-visual { max-width: 280px; margin-inline: auto; }
-  .about-grid .photo-frame { max-width: 320px; margin-inline: auto; }
+  /* No celular: sem foto solta ocupando a tela toda no hero, e sem a faixa de
+     serviços (que aparece esquisita e ainda se repete nos cards logo abaixo) */
+  .hero-visual { display: none; }
+  .trustbar { display: none; }
+  /* Linha de avaliação empilhada, sem o "•" solto quebrando a linha */
+  .hero-trust { flex-direction: column; align-items: flex-start; gap: 6px; font-size: .92rem; }
+  .hero-trust .sep { display: none; }
+  .about-grid .photo-frame { max-width: 300px; margin-inline: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
