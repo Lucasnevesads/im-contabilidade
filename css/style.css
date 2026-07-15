@@ -134,13 +134,14 @@ p { color: var(--muted); }
 .nav-links a.active { color: var(--brand); }
 .nav-actions { display: flex; align-items: center; gap: 14px; }
 .nav-toggle { display: none; width: 44px; height: 44px; border-radius: 12px; position: relative; }
-.nav-toggle span { position: absolute; left: 11px; right: 11px; height: 2px; background: var(--brand); border-radius: 2px; transition: .3s var(--ease); }
+.nav-toggle span { position: absolute; left: 11px; right: 11px; height: 2px; background: var(--brand); border-radius: 2px; transform-origin: center; transition: transform .35s var(--ease), opacity .18s var(--ease); }
 .nav-toggle span:nth-child(1) { top: 15px; }
 .nav-toggle span:nth-child(2) { top: 21px; }
 .nav-toggle span:nth-child(3) { top: 27px; }
-body.nav-open .nav-toggle span:nth-child(1) { top: 21px; transform: rotate(45deg); }
+/* Move e gira numa transformacao so (translate + rotate) pra cruzar sincronizado */
+body.nav-open .nav-toggle span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 body.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
-body.nav-open .nav-toggle span:nth-child(3) { top: 21px; transform: rotate(-45deg); }
+body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
 /* Logo */
 .logo { display: inline-flex; align-items: center; gap: 11px; }
@@ -215,6 +216,8 @@ body.nav-open .nav-toggle span:nth-child(3) { top: 21px; transform: rotate(-45de
 .photo-frame::before { content: ""; position: absolute; z-index: 0; left: -22px; top: -22px; width: 46%; height: 46%; border: 2px solid var(--navy-100); border-radius: var(--radius-lg); }
 /* No hero, limita a altura da foto pra ela nao esticar a secao pra fora da tela */
 .hero-photo img { max-height: 540px; object-position: center 18%; }
+/* Foto do Contato: mesma ideia, nao deixar a Sayuri "inteira" ocupando tudo */
+.contato-photo img { max-height: 420px; object-position: center 15%; }
 
 /* ---------- Quem somos ---------- */
 .about-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 56px; align-items: center; }
@@ -456,7 +459,7 @@ body.nav-open .nav-toggle span:nth-child(3) { top: 21px; transform: rotate(-45de
 @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 
 /* ---------- Mobile nav panel ---------- */
-.nav-mobile { position: fixed; inset: 74px 0 auto 0; background: #fff; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); padding: 20px 22px 28px; transform: translateY(-120%); transition: transform .4s var(--ease); z-index: 99; display:none; }
+.nav-mobile { position: fixed; inset: 74px 0 auto 0; background: #fff; border-bottom: 1px solid var(--line); border-radius: 0 0 22px 22px; box-shadow: var(--shadow); padding: 20px 22px 28px; transform: translateY(-120%); transition: transform .35s var(--ease); z-index: 99; display:none; }
 .nav-mobile a { display: block; padding: 13px 4px; font-family: var(--font-head); font-weight: 600; font-size: 1.05rem; color: var(--ink); border-bottom: 1px solid var(--line); }
 /* Reforça o botão dentro do menu mobile (senão a regra .nav-mobile a vaza:
    deixava o texto escuro, alinhado à esquerda e com linha divisória) */
