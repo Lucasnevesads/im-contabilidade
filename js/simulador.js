@@ -1,5 +1,5 @@
 /* =========================================================
-   IM Contabilidade — Simulador de plano (wizard)
+   IM Contabilidade, Simulador de plano (wizard)
    Renderiza em #simApp. Estima plano + faixa de valor e
    entrega o lead pronto no WhatsApp.
    ========================================================= */
@@ -88,7 +88,7 @@
     {
       key: "contato",
       title: "Pronto! Pra onde enviamos sua proposta?",
-      sub: "Sem compromisso — a IM responde em até 5 minutos no horário comercial.",
+      sub: "Sem compromisso, a IM responde em até 5 minutos no horário comercial.",
       type: "form",
     },
   ];
@@ -218,7 +218,7 @@
     side.innerHTML = `
       <span class="eyebrow">Sua estimativa</span>
       <div class="result-plan">${svg(ic.check)} Plano ${r.plano}</div>
-      <div class="result-price">R$ ${r.low}<small> – R$ ${r.high}/mês</small></div>
+      <div class="result-price">R$ ${r.low}<small> a R$ ${r.high}/mês</small></div>
       <ul class="result-list">${r.features.map((f) => `<li>${svg(ic.check)} ${f}</li>`).join("")}</ul>
       <p class="result-note">*Valor estimado. A proposta final é personalizada conforme a análise da sua empresa.</p>`;
   }
@@ -235,7 +235,7 @@
     const label = {
       mei: "MEI", autonomo: "Autônomo/Liberal", empresa: "Empresa já aberta", abrir: "Quer abrir empresa",
       simples: "Simples Nacional", presumido: "Lucro Presumido", real: "Lucro Real", "nao-sei": "Não sabe o regime",
-      "ate-15k": "até R$15 mil", "15-50k": "R$15–50 mil", "50-150k": "R$50–150 mil", "150k+": "acima de R$150 mil",
+      "ate-15k": "até R$15 mil", "15-50k": "R$15 a 50 mil", "50-150k": "R$50 a 150 mil", "150k+": "acima de R$150 mil",
       "0": "nenhum", "1-3": "1 a 3", "4-10": "4 a 10", "10+": "mais de 10",
       baixo: "poucas notas", medio: "volume médio", alto: "alto volume",
     };
@@ -251,7 +251,7 @@
       `*Faturamento:* ${L("faturamento")}\n` +
       `*Funcionários:* ${L("funcionarios")}\n` +
       `*Notas fiscais:* ${L("notas")}\n\n` +
-      `➡️ *Plano sugerido:* ${r.plano} (R$ ${r.low}–${r.high}/mês)\n\n` +
+      `➡️ *Plano sugerido:* ${r.plano} (R$ ${r.low} a ${r.high}/mês)\n\n` +
       `Gostaria de receber a proposta detalhada.`;
 
     window.open(waLink(msg), "_blank", "noopener");

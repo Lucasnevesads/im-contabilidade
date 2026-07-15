@@ -1,5 +1,5 @@
 /* =========================================================
-   IM Contabilidade — main.js
+   IM Contabilidade, main.js
    Comportamentos compartilhados de todas as páginas.
    ========================================================= */
 
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.addEventListener("click", (e) => { if (e.target === overlay) close(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
 
-    /* Abre sozinho após 18s (uma vez por sessão) — estilo Contaja */
+    /* Abre sozinho após 18s (uma vez por sessão), estilo Contaja */
     if (!sessionStorage.getItem("im_lead_seen")) {
       setTimeout(() => {
         if (!overlay.classList.contains("open")) { open(); sessionStorage.setItem("im_lead_seen", "1"); }
