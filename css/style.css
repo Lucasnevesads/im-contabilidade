@@ -388,9 +388,9 @@ body.nav-open .nav-toggle span:nth-child(3) { top: 21px; transform: rotate(-45de
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); margin-top: 44px; padding-top: 24px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: .86rem; }
 
 /* ---------- WhatsApp flutuante ---------- */
-.wa-float { position: fixed; right: 22px; bottom: 22px; z-index: 90; width: 60px; height: 60px; border-radius: 50%; background: #25d366; display: grid; place-items: center; box-shadow: 0 12px 28px rgba(37,211,102,.45); transition: transform .3s var(--ease); }
+.wa-float { position: fixed; right: 22px; bottom: 22px; z-index: 90; width: 60px; height: 60px; border-radius: 50%; background: #fff; display: grid; place-items: center; box-shadow: 0 12px 28px rgba(37,211,102,.45); transition: transform .3s var(--ease); }
 .wa-float:hover { transform: scale(1.08); }
-.wa-float svg { width: 32px; height: 32px; fill: #fff; }
+.wa-float img { width: 72%; height: 72%; }
 .wa-float::after { content:""; position:absolute; inset:0; border-radius:50%; border:2px solid #25d366; animation: ring 2.4s ease-out infinite; }
 @keyframes ring { 0%{transform:scale(1);opacity:.7} 100%{transform:scale(1.5);opacity:0} }
 
@@ -456,7 +456,18 @@ body.nav-open .nav-toggle span:nth-child(3) { top: 21px; transform: rotate(-45de
 /* ---------- Mobile nav panel ---------- */
 .nav-mobile { position: fixed; inset: 74px 0 auto 0; background: #fff; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); padding: 20px 22px 28px; transform: translateY(-120%); transition: transform .4s var(--ease); z-index: 99; display:none; }
 .nav-mobile a { display: block; padding: 13px 4px; font-family: var(--font-head); font-weight: 600; font-size: 1.05rem; color: var(--ink); border-bottom: 1px solid var(--line); }
-.nav-mobile .btn { margin-top: 18px; }
+/* Reforça o botão dentro do menu mobile (senão a regra .nav-mobile a vaza:
+   deixava o texto escuro, alinhado à esquerda e com linha divisória) */
+.nav-mobile .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 22px;
+  padding: 16px 26px;
+  border-bottom: none;
+  color: #fff;
+  font-size: 1rem;
+}
 body.nav-open .nav-mobile { transform: none; }
 
 /* ---------- Responsivo ---------- */
@@ -485,6 +496,9 @@ body.nav-open .nav-mobile { transform: none; }
   .hero-cta { flex-direction: column; align-items: stretch; }
   .hero-cta .btn, .cta-actions .btn { width: 100%; }
   .hero-trust { font-size: .86rem; }
+  /* Foto do hero não pode ocupar a tela toda no celular */
+  .hero-visual { max-width: 280px; margin-inline: auto; }
+  .about-grid .photo-frame { max-width: 320px; margin-inline: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
