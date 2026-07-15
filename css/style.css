@@ -152,7 +152,7 @@ body.nav-open .nav-toggle span:nth-child(3) { top: 21px; transform: rotate(-45de
 .logo-text small { font-size: .68rem; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
 
 /* ---------- Hero ---------- */
-.hero { position: relative; padding-block: clamp(56px, 8vw, 104px); overflow: hidden; }
+.hero { position: relative; padding-block: clamp(32px, 4vw, 56px); overflow: hidden; }
 .hero::before {
   content: ""; position: absolute; inset: 0; z-index: -2;
   background:
@@ -213,6 +213,8 @@ body.nav-open .nav-toggle span:nth-child(3) { top: 21px; transform: rotate(-45de
 .photo-frame img { position: relative; z-index: 1; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); object-fit: cover; }
 .photo-frame::after { content: ""; position: absolute; z-index: 0; right: -22px; bottom: -22px; width: 62%; height: 68%; background: radial-gradient(circle at bottom right, rgba(255,122,24,.9), transparent 72%); border-radius: var(--radius-lg); }
 .photo-frame::before { content: ""; position: absolute; z-index: 0; left: -22px; top: -22px; width: 46%; height: 46%; border: 2px solid var(--navy-100); border-radius: var(--radius-lg); }
+/* No hero, limita a altura da foto pra ela nao esticar a secao pra fora da tela */
+.hero-photo img { max-height: 540px; object-position: center 18%; }
 
 /* ---------- Quem somos ---------- */
 .about-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 56px; align-items: center; }
