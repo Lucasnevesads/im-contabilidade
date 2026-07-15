@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato — IM Contabilidade | Iguchi &amp; Marques</title>
+  <meta name="description" content="Fale com a IM Contabilidade em Castanhal-PA. Atendimento humano em até 5 minutos pelo WhatsApp. Tire suas dúvidas sem compromisso." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpeg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo" aria-label="IM Contabilidade">
+        <span class="logo-mark"><span>im<b>.</b></span></span>
+        <span class="logo-text"><strong>IM Contabilidade</strong><small>Iguchi &amp; Marques</small></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Início</a><a href="servicos.html">Serviços</a><a href="planos.html">Planos</a><a href="blog.html">Blog</a><a href="contato.html" class="active">Contato</a>
+      </nav>
+      <div class="nav-actions"><a href="planos.html" class="btn btn-primary">Simular meu plano</a></div>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-mobile">
+      <a href="index.html">Início</a><a href="servicos.html">Serviços</a><a href="planos.html">Planos</a><a href="blog.html">Blog</a><a href="contato.html">Contato</a>
+      <a href="planos.html" class="btn btn-primary btn-block">Simular meu plano</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="crumbs reveal"><a href="index.html">Início</a> / <span>Contato</span></div>
+        <h1 class="reveal d1">Vamos conversar?</h1>
+        <p class="reveal d2">Tire suas dúvidas sem compromisso. No horário comercial, a IM responde em até 5 minutos.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2" style="gap:40px;align-items:start">
+
+          <!-- Formulário -->
+          <div class="reveal">
+            <div class="simulator" style="padding:clamp(28px,4vw,44px)">
+              <span class="eyebrow">Envie sua mensagem</span>
+              <h2 style="margin-bottom:8px;font-size:1.7rem">Fale com um contador</h2>
+              <p style="margin-bottom:26px">Preencha e continue no WhatsApp com tudo já preenchido.</p>
+              <form id="contatoForm">
+                <div class="field"><label>Nome</label><input name="nome" required placeholder="Seu nome completo" /></div>
+                <div class="field"><label>WhatsApp</label><input name="telefone" required placeholder="(91) 9____-____" /></div>
+                <div class="field"><label>E-mail (opcional)</label><input name="email" type="email" placeholder="voce@email.com" /></div>
+                <div class="field"><label>Assunto</label>
+                  <select name="assunto">
+                    <option>Abrir empresa</option>
+                    <option>Trocar de contador</option>
+                    <option>MEI / Simples Nacional</option>
+                    <option>Imposto de renda</option>
+                    <option>Folha de pagamento</option>
+                    <option>BPO financeiro</option>
+                    <option>Outro assunto</option>
+                  </select>
+                </div>
+                <div class="field"><label>Mensagem</label><textarea name="mensagem" rows="4" placeholder="Conte rapidamente como podemos ajudar"></textarea></div>
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Enviar pelo WhatsApp</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Info -->
+          <div class="reveal d1">
+            <div class="photo-frame" style="margin-bottom:26px">
+              <img src="assets/socia-oculos.jpeg" alt="Sayuri Iguchi, contadora da IM Contabilidade" width="520" height="600" />
+            </div>
+            <div class="card" style="margin-bottom:20px">
+              <div class="feat" style="align-items:center">
+                <div class="feat-ic" style="background:var(--navy-050);border-color:var(--line)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.5-4A8 8 0 1121 12a8 8 0 01-12 6.9L3 21z"/></svg></div>
+                <div><h3 style="font-size:1.1rem">WhatsApp</h3><p style="margin:0">(91) 98805-0643 · (91) 98379-9894</p></div>
+              </div>
+              <a data-wa="Olá! Vim pelo site da IM Contabilidade." class="btn btn-dark btn-block" style="margin-top:18px">Abrir conversa</a>
+            </div>
+
+            <div class="card" style="margin-bottom:20px">
+              <h3 style="font-size:1.1rem;margin-bottom:14px">Onde estamos</h3>
+              <p style="margin-bottom:6px"><strong style="color:var(--brand)">Castanhal — Pará</strong></p>
+              <p style="margin:0">Atendimento presencial na cidade e 100% digital para todo o Brasil.</p>
+            </div>
+
+            <div class="card">
+              <h3 style="font-size:1.1rem;margin-bottom:14px">Horário de atendimento</h3>
+              <p style="margin:0 0 4px">Segunda a sexta: 08h às 18h</p>
+              <p style="margin:0">Sábado: 08h às 12h</p>
+            </div>
+
+            <div class="card" style="margin-top:20px;background:var(--brand);color:#fff;border-color:transparent">
+              <div class="feat" style="align-items:center">
+                <div class="feat-ic" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.15)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange-400)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></div>
+                <div><h3 style="font-size:1.1rem;color:#fff">Instagram</h3><p style="margin:0;color:rgba(255,255,255,.75)">@imescritoriocontabilidade</p></div>
+              </div>
+              <a href="https://instagram.com/imescritoriocontabilidade" target="_blank" rel="noopener" class="btn btn-white btn-block" style="margin-top:18px">Seguir no Instagram</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo"><span class="logo-mark"><span>im<b>.</b></span></span><span class="logo-text"><strong>IM Contabilidade</strong><small>Iguchi &amp; Marques</small></span></a>
+          <p class="footer-desc">Contabilidade descomplicada para quem quer crescer com segurança. Castanhal-PA e todo o Brasil.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/imescritoriocontabilidade" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg></a>
+            <a data-wa="Olá! Vim pelo site da IM Contabilidade." aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 21l1.5-4A8 8 0 1121 12a8 8 0 01-12 6.9L3 21z"/></svg></a>
+          </div>
+        </div>
+        <div><h4>Serviços</h4><a href="servicos.html">Abertura de empresa</a><a href="servicos.html">MEI &amp; Simples</a><a href="servicos.html">Imposto de renda</a><a href="servicos.html">Folha de pagamento</a><a href="servicos.html">BPO financeiro</a></div>
+        <div><h4>Empresa</h4><a href="index.html">Início</a><a href="planos.html">Planos</a><a href="blog.html">Blog</a><a href="contato.html">Contato</a></div>
+        <div><h4>Fale com a gente</h4><a href="tel:+5591988050643">(91) 98805-0643</a><a href="tel:+5591983799894">(91) 98379-9894</a><a data-wa="Olá! Vim pelo site da IM Contabilidade.">WhatsApp</a><a href="#">Castanhal — Pará</a></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> IM Contabilidade — Iguchi &amp; Marques. Todos os direitos reservados.</span>
+        <span>Feito com cuidado para empreender melhor.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" data-wa="Olá! Vim pelo site da IM Contabilidade e gostaria de atendimento." aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 2a8 8 0 016.9 12l.4.7-.8 2.8-2.9-.8-.6.3A8 8 0 1112 4z" fill="#fff"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>
+    /* Form de contato -> WhatsApp com tudo preenchido */
+    document.getElementById("contatoForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const f = e.target;
+      const msg =
+        `Olá, IM Contabilidade! Vim pelo site.\n\n` +
+        `*Nome:* ${f.nome.value.trim()}\n` +
+        `*Telefone:* ${f.telefone.value.trim()}\n` +
+        (f.email.value.trim() ? `*E-mail:* ${f.email.value.trim()}\n` : "") +
+        `*Assunto:* ${f.assunto.value}\n` +
+        (f.mensagem.value.trim() ? `*Mensagem:* ${f.mensagem.value.trim()}` : "");
+      window.open(waLink(msg), "_blank", "noopener");
+    });
+  </script>
+</body>
+</html>
